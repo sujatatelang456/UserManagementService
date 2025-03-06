@@ -1,0 +1,15 @@
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Application.deps.json
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Application.dll
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Application.pdb
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Domain.dll
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\bin\Debug\net8.0\UserManagement.Domain.pdb
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.csproj.AssemblyReference.cache
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.AssemblyInfoInputs.cache
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.AssemblyInfo.cs
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.csproj.CoreCompileInputs.cache
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\UserMana.22515BBA.Up2Date
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.dll
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\refint\UserManagement.Application.dll
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\UserManagement.Application.pdb
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Application\obj\Debug\net8.0\ref\UserManagement.Application.dll

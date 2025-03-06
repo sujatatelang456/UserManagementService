@@ -1,0 +1,17 @@
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\bin\Debug\net8.0\UserManagement.Infrastructure.deps.json
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\bin\Debug\net8.0\UserManagement.Infrastructure.dll
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\bin\Debug\net8.0\UserManagement.Infrastructure.pdb
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\bin\Debug\net8.0\UserManagement.Application.dll
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\bin\Debug\net8.0\UserManagement.Domain.dll
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\bin\Debug\net8.0\UserManagement.Application.pdb
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\bin\Debug\net8.0\UserManagement.Domain.pdb
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\UserManagement.Infrastructure.csproj.AssemblyReference.cache
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\UserManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\UserManagement.Infrastructure.AssemblyInfoInputs.cache
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\UserManagement.Infrastructure.AssemblyInfo.cs
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\UserManagement.Infrastructure.csproj.CoreCompileInputs.cache
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\UserMana.ED8CE3B0.Up2Date
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\UserManagement.Infrastructure.dll
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\refint\UserManagement.Infrastructure.dll
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\UserManagement.Infrastructure.pdb
+D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Infrastructure\obj\Debug\net8.0\ref\UserManagement.Infrastructure.dll
