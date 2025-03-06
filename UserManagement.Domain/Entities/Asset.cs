@@ -12,5 +12,6 @@ namespace UserManagement.Domain.Entities
         public string AssetName { get; set; }
         public string AssetAddress { get; set; }
         public DateTime UpdatedDate{get;set;}
+        public bool Status  { get; set; }
     }
 }
