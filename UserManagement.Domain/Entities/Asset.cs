@@ -11,5 +11,6 @@ namespace UserManagement.Domain.Entities
         public int AssetId { get; set; }
         public string AssetName { get; set; }
         public string AssetAddress { get; set; }
+        public bool Status  { get; set; }
     }
 }
