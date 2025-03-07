@@ -10,15 +10,26 @@ namespace UserManagement.WebApi.Controllers
     public class CamundaController : ControllerBase
     {
         private readonly CamundaService _camundaService;
-        public CamundaController(CamundaService camundaService) {
+        private readonly IConfiguration _configuration;
+        public CamundaController(CamundaService camundaService, IConfiguration configuration) {
             _camundaService = camundaService;
+            _configuration = configuration;
         }
 
-        [HttpPost("start/{processKey}")]
-        public async Task<IActionResult> StartProcess(string processKey, Asset asset)
+        //[HttpPost("start/{processKey}")]
+        //public async Task<IActionResult> StartProcess(string processKey, Asset asset)
+        //{
+        //    await _camundaService.StartProcess(processKey, asset);
+        //    return Ok($"Process {processKey} started successfully with Invoice ID: {asset.AssetName}");
+        //}
+        [HttpGet]
+        public async Task<IActionResult> StartProcess()
         {
-            await _camundaService.StartProcess(processKey, asset);
-            return Ok($"Process {processKey} started successfully with Invoice ID: {asset.AssetName}");
+            var getCamundaClusterId = _configuration["CamundaClusterID"];
+            await _camundaService.StartProcess(getCamundaClusterId);
+            return Ok($"Process started successfully");
         }
+        
+        
     }
 }
