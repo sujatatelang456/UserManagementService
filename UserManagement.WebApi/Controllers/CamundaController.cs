@@ -22,14 +22,12 @@ namespace UserManagement.WebApi.Controllers
         //    await _camundaService.StartProcess(processKey, asset);
         //    return Ok($"Process {processKey} started successfully with Invoice ID: {asset.AssetName}");
         //}
-        [HttpGet]
-        public async Task<IActionResult> StartProcess()
+        [HttpPost("Asset/StartProcess")]
+        public async Task<IActionResult> StartProcess(string processDefinitionId, AssetUploadRequest assetUploadRequest)
         {
             var getCamundaClusterId = _configuration["CamundaClusterID"];
-            await _camundaService.StartProcess(getCamundaClusterId);
+            await _camundaService.StartProcess(getCamundaClusterId, processDefinitionId,assetUploadRequest);
             return Ok($"Process started successfully");
-        }
-        
-        
+        }        
     }
 }
