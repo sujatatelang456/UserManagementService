@@ -12,13 +12,22 @@ namespace UserManagement.Application.Services
     public class CamundaService
     {       
 
-        public async Task StartProcess(string clusterId)
+        public async Task StartProcess(string clusterId, string processDefinitionId, AssetUploadRequest assetUploadRequest)
         {
             HttpClient _httpClient = new HttpClient();
             var accessToken = await GetOperateAccessToken();
-            var requestBody = new
+            var requestBody = new 
             {
-                processDefinitionId = "template-human-task-tutorial-1pnmbd1",
+                processDefinitionId = processDefinitionId,//"template-human-task-tutorial-1pnmbd1",
+                variables = new {
+                    propertyStatus = assetUploadRequest.PropertyStatus,
+                    propertyPrice = assetUploadRequest.PropertyPrice,
+                    dateAvailable = assetUploadRequest.DateAvailable,
+                    ownerName = assetUploadRequest.OwnerName,
+                    ownerEmail = assetUploadRequest.OwnerEmail,
+                    rework = assetUploadRequest.Rework,
+                    timerDuration = assetUploadRequest.TimerDuration,
+                }                
             };
 
             // Convert object to JSON string
