@@ -16,17 +16,21 @@ namespace UserManagement.Application.Services
         {
             HttpClient _httpClient = new HttpClient();
             var accessToken = await GetOperateAccessToken();
+
             var requestBody = new 
             {
-                processDefinitionId = processDefinitionId,//"template-human-task-tutorial-1pnmbd1",
+                processDefinitionId = processDefinitionId,//"template-human-task-tutorial-1pnmbd1",                
                 variables = new {
                     propertyStatus = assetUploadRequest.PropertyStatus,
                     propertyPrice = assetUploadRequest.PropertyPrice,
-                    dateAvailable = assetUploadRequest.DateAvailable,
+                    dateAvailable = assetUploadRequest.DateAvailable.ToString("yyyy-MM-dd"), //dateAvailable.Replace("-","/"),
                     ownerName = assetUploadRequest.OwnerName,
                     ownerEmail = assetUploadRequest.OwnerEmail,
                     rework = assetUploadRequest.Rework,
                     timerDuration = assetUploadRequest.TimerDuration,
+                    propertyAddress = assetUploadRequest.PropertyAddress,
+                    ownerContact = assetUploadRequest.OwnerContact,
+                    propertyType = assetUploadRequest.PropertyType,
                 }                
             };
 
