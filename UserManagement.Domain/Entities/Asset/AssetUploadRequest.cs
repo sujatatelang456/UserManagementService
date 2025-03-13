@@ -15,7 +15,10 @@ namespace UserManagement.Domain.Entities
         public DateTime DateAvailable { get; set; }
         public string OwnerName { get; set; }
         public string OwnerEmail { get; set; }
-        public bool Rework { get; set; }
+        public string Rework { get; set; }
         public string TimerDuration { get; set; } = "PT5M";
+        public string PropertyAddress { get; set; }
+        public string OwnerContact { get; set; }
+        public string PropertyType { get; set; }
     }
 }
