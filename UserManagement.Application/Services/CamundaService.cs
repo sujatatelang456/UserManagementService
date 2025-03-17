@@ -6,6 +6,8 @@ using UserManagement.Domain.Entities;
 //using System.Text.Json;
 using System.Net;
 using JsonSerializer = System.Text.Json.JsonSerializer;
+using System.Runtime;
+using System.Threading.Tasks;
 
 namespace UserManagement.Application.Services
 {
@@ -52,11 +54,20 @@ namespace UserManagement.Application.Services
             if (response.StatusCode == HttpStatusCode.OK) {
                 HttpResponseMessage res = new HttpResponseMessage();
                 // get Active task = taskState = CREATED
-                var processRespose = JsonConvert.DeserializeObject<CamundaProcess>(responseContent);
+                var processRespose = JsonConvert.DeserializeObject<CamundaProcess>(responseContent)??new CamundaProcess();
                 res = await GetProcessInstanceTasks(processRespose.processInstanceKey, clusterId);
-                
+
+                string jsonString = await res.Content.ReadAsStringAsync();
+                var tasks = JsonConvert.DeserializeObject<List<CamundaTask>>(jsonString)??new List<CamundaTask>();
+
+                var taskId = tasks.Any() ? tasks.FirstOrDefault(t => t.processInstanceKey == processRespose.processInstanceKey).id : null;
+
                 if (res.StatusCode == HttpStatusCode.OK) {
-                    // assign task - TODO
+                    if (taskId != null)
+                    {
+                        await this.AssignTask(taskId, "kiran.patwardhan@infovision.com", clusterId);
+                    }                   
+
                     // res = await AssignTask("", )
                 }
             }
@@ -75,8 +86,8 @@ namespace UserManagement.Application.Services
                 allowOverrideAssignment = true
             };
 
-            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v1/tasks/{taskId}/assign";
-            HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", requestBody);
+            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v2/user-tasks/{taskId}/assignment";
+            HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", requestBody, "POST");
 
             return response;
         }
@@ -94,7 +105,7 @@ namespace UserManagement.Application.Services
                 processInstanceKey = processInstanceKey
             };
 
-            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v1//tasks/search";
+            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v1/tasks/search";
             HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", requestBody);
 
             return response;
@@ -122,7 +133,7 @@ namespace UserManagement.Application.Services
             HttpResponseMessage response = await GetHttpResponseMessage(url, "operate", requestBody);
         }
 
-        private async Task<HttpResponseMessage> GetHttpResponseMessage(string url, string audience, object requestBody)
+        private async Task<HttpResponseMessage> GetHttpResponseMessage(string url, string audience, object requestBody, string method = "POST")
         {
             HttpClient _httpClient = new HttpClient();
             var accessToken = await GetAccessTokenByAudience(audience);
@@ -137,8 +148,8 @@ namespace UserManagement.Application.Services
             _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {accessToken}");
 
             // Send POST request
-            HttpResponseMessage response = await _httpClient.PostAsync(url, content);
-
+            HttpResponseMessage response = method == "POST" ? await _httpClient.PostAsync(url, content)  : await _httpClient.PatchAsync(url, content);
+            
             return response;
         }
         public async Task<string> GetAccessTokenByAudience(string audience)
