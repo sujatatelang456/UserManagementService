@@ -38,10 +38,10 @@ namespace UserManagement.WebApi.Controllers
             // return Ok($"Process started successfully");
         }
         [HttpPost("CompleteCamundaTask")]
-        public async Task<CamundaTask> CompleteCamundaTask(string taskId, object variables)
+        public async Task CompleteCamundaTask(string taskId, AssetUploadRequest variable)
         {
             var getCamundaClusterId = _configuration["CamundaClusterID"];
-            return await _camundaService.CompleteCamundaTask(taskId, getCamundaClusterId, variables);
+            await _camundaService.CompleteCamundaTask(taskId, getCamundaClusterId, variable);
             // return Ok($"Process started successfully");
         }
     }
