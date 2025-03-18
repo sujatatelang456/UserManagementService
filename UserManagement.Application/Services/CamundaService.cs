@@ -8,7 +8,6 @@ using System.Net;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 using System.Runtime;
 using System.Threading.Tasks;
-using UserManagement.Domain.Entities.CamundaProcess.Task;
 
 namespace UserManagement.Application.Services
 {
@@ -134,20 +133,37 @@ namespace UserManagement.Application.Services
             return variables;
         }
 
-        public async Task<CamundaTask> CompleteCamundaTask(string taskId, string clusterId, object variables)
+        public async Task CompleteCamundaTask(string taskId, string clusterId, AssetUploadRequest variable)
         {
+            // TODO - need to check how we can make this method generalized to make any task as complete
+            // currently its tightly bound to asset upload task request object
             var requestBody = new
             {
-                variables = variables
+                variables = new
+                {
+                    propertyStatus = variable.PropertyStatus,
+                    propertyPrice = variable.PropertyPrice,
+                    dateAvailable = variable.DateAvailable.ToString("yyyy-MM-dd"), //dateAvailable.Replace("-","/"),
+                    ownerName = variable.OwnerName,
+                    ownerEmail = variable.OwnerEmail,
+                    rework = variable.Rework,
+                    timerDuration = variable.TimerDuration,
+                    propertyAddress = variable.PropertyAddress,
+                    ownerContact = variable.OwnerContact,
+                    propertyType = variable.PropertyType,
+                }
             };
 
-            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v1/tasks/{taskId}/complete";
-            HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", requestBody);
+            var intTaskId = Convert.ToInt64(taskId);
 
-            string jsonString = await response.Content.ReadAsStringAsync();
-            var task = JsonConvert.DeserializeObject<CamundaTask>(jsonString) ?? new CamundaTask();
+            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v2/user-tasks/{intTaskId}/completion";
+           // HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", requestBody);
 
-            return task;
+            await GetHttpResponseMessage(url, "tasklist", requestBody);
+            //string jsonString = await response.Content.ReadAsStringAsync();
+            //var task = JsonConvert.DeserializeObject<CamundaTask>(jsonString) ?? new CamundaTask();
+
+            //return response;
         }
 
         private async Task<HttpResponseMessage> GetHttpResponseMessage(string url, string audience, object requestBody, string method = "POST")
