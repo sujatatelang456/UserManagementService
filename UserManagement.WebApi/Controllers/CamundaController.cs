@@ -17,17 +17,24 @@ namespace UserManagement.WebApi.Controllers
             _configuration = configuration;
         }
 
-        //[HttpPost("start/{processKey}")]
-        //public async Task<IActionResult> StartProcess(string processKey, Asset asset)
-        //{
-        //    await _camundaService.StartProcess(processKey, asset);
-        //    return Ok($"Process {processKey} started successfully with Invoice ID: {asset.AssetName}");
-        //}
-        [HttpPost("StartProcess")]
+        [HttpPost("Asset/StartProcess")]
         public async Task<CamundaProcess> StartProcess(string processDefinitionId, AssetUploadRequest assetUploadRequest)
         {
             var getCamundaClusterId = _configuration["CamundaClusterID"];
-            return await _camundaService.StartProcess(getCamundaClusterId, processDefinitionId,assetUploadRequest);
+            var variables = new
+            {
+                propertyStatus = assetUploadRequest.PropertyStatus,
+                propertyPrice = assetUploadRequest.PropertyPrice,
+                dateAvailable = assetUploadRequest.DateAvailable.ToString("yyyy-MM-dd"), //dateAvailable.Replace("-","/"),
+                ownerName = assetUploadRequest.OwnerName,
+                ownerEmail = assetUploadRequest.OwnerEmail,
+                rework = assetUploadRequest.Rework,
+                timerDuration = assetUploadRequest.TimerDuration,
+                propertyAddress = assetUploadRequest.PropertyAddress,
+                ownerContact = assetUploadRequest.OwnerContact,
+                propertyType = assetUploadRequest.PropertyType,
+            };
+            return await _camundaService.StartProcess(getCamundaClusterId, processDefinitionId, variables);
             // return Ok($"Process started successfully");
         }
         [HttpPost("AssignCamundaTask")]
@@ -37,11 +44,24 @@ namespace UserManagement.WebApi.Controllers
             return await _camundaService.AssignCamundaTask(taskId, assignee, getCamundaClusterId, processInstanceKey);
             // return Ok($"Process started successfully");
         }
-        [HttpPost("CompleteCamundaTask")]
-        public async Task CompleteCamundaTask(string taskId, AssetUploadRequest variable)
+        [HttpPost("Asset/CompleteCamundaTask")]
+        public async Task CompleteCamundaTask(string taskId, AssetUploadRequest assetUploadRequest)
         {
             var getCamundaClusterId = _configuration["CamundaClusterID"];
-            await _camundaService.CompleteCamundaTask(taskId, getCamundaClusterId, variable);
+            var variables = new
+            {
+                propertyStatus = assetUploadRequest.PropertyStatus,
+                propertyPrice = assetUploadRequest.PropertyPrice,
+                dateAvailable = assetUploadRequest.DateAvailable.ToString("yyyy-MM-dd"), //dateAvailable.Replace("-","/"),
+                ownerName = assetUploadRequest.OwnerName,
+                ownerEmail = assetUploadRequest.OwnerEmail,
+                rework = assetUploadRequest.Rework,
+                timerDuration = assetUploadRequest.TimerDuration,
+                propertyAddress = assetUploadRequest.PropertyAddress,
+                ownerContact = assetUploadRequest.OwnerContact,
+                propertyType = assetUploadRequest.PropertyType,
+            };
+            await _camundaService.CompleteCamundaTask(taskId, getCamundaClusterId, variables);
             // return Ok($"Process started successfully");
         }
     }

@@ -13,24 +13,12 @@ namespace UserManagement.Application.Services
 {
     public class CamundaService
     {
-        public async Task<CamundaProcess> StartProcess(string clusterId, string processDefinitionId, AssetUploadRequest assetUploadRequest)
+        public async Task<CamundaProcess> StartProcess(string clusterId, string processDefinitionId, dynamic variables) // AssetUploadRequest assetUploadRequest
         {
             var requestBody = new
             {
                 processDefinitionId = processDefinitionId, //"template-human-task-tutorial-1pnmbd1",                
-                variables = new
-                {
-                    propertyStatus = assetUploadRequest.PropertyStatus,
-                    propertyPrice = assetUploadRequest.PropertyPrice,
-                    dateAvailable = assetUploadRequest.DateAvailable.ToString("yyyy-MM-dd"), //dateAvailable.Replace("-","/"),
-                    ownerName = assetUploadRequest.OwnerName,
-                    ownerEmail = assetUploadRequest.OwnerEmail,
-                    rework = assetUploadRequest.Rework,
-                    timerDuration = assetUploadRequest.TimerDuration,
-                    propertyAddress = assetUploadRequest.PropertyAddress,
-                    ownerContact = assetUploadRequest.OwnerContact,
-                    propertyType = assetUploadRequest.PropertyType,
-                }
+                variables = variables
             };
 
             var url = $"https://syd-1.zeebe.camunda.io:443/{clusterId}/v2/process-instances";
@@ -40,26 +28,6 @@ namespace UserManagement.Application.Services
             string responseContent = await response.Content.ReadAsStringAsync();
             CamundaProcess processRespose = new CamundaProcess();
             processRespose = JsonConvert.DeserializeObject<CamundaProcess>(responseContent);
-            // CamundaTask processTask= new CamundaTask();
-            //if (response.StatusCode == HttpStatusCode.OK)
-            //{
-            // HttpResponseMessage res = new HttpResponseMessage();
-            // get Active task = taskState = CREATED
-            // var tasks = await GetProcessInstanceTasks(processRespose.processInstanceKey, clusterId);
-            // var taskId = tasks.Any() ? tasks.FirstOrDefault(t => t.processInstanceKey == processRespose.processInstanceKey).id : null;
-
-            //if (res.StatusCode == HttpStatusCode.OK)
-            //{
-            //    if (taskId != null)
-            //    {
-            //        processTask = await this.AssignCamundaTask(taskId, "kiran.patwardhan@infovision.com", clusterId);
-            //    }
-            //}
-            //}
-            //else
-            //{
-            //    // error handling 
-            //}
 
             return processRespose;
         }
@@ -133,37 +101,19 @@ namespace UserManagement.Application.Services
             return variables;
         }
 
-        public async Task CompleteCamundaTask(string taskId, string clusterId, AssetUploadRequest variable)
+        public async Task CompleteCamundaTask(string taskId, string clusterId, dynamic variables)
         {
             // TODO - need to check how we can make this method generalized to make any task as complete
             // currently its tightly bound to asset upload task request object
             var requestBody = new
             {
-                variables = new
-                {
-                    propertyStatus = variable.PropertyStatus,
-                    propertyPrice = variable.PropertyPrice,
-                    dateAvailable = variable.DateAvailable.ToString("yyyy-MM-dd"), //dateAvailable.Replace("-","/"),
-                    ownerName = variable.OwnerName,
-                    ownerEmail = variable.OwnerEmail,
-                    rework = variable.Rework,
-                    timerDuration = variable.TimerDuration,
-                    propertyAddress = variable.PropertyAddress,
-                    ownerContact = variable.OwnerContact,
-                    propertyType = variable.PropertyType,
-                }
+                variables = variables
             };
 
             var intTaskId = Convert.ToInt64(taskId);
 
             var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v2/user-tasks/{intTaskId}/completion";
-           // HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", requestBody);
-
             await GetHttpResponseMessage(url, "tasklist", requestBody);
-            //string jsonString = await response.Content.ReadAsStringAsync();
-            //var task = JsonConvert.DeserializeObject<CamundaTask>(jsonString) ?? new CamundaTask();
-
-            //return response;
         }
 
         private async Task<HttpResponseMessage> GetHttpResponseMessage(string url, string audience, object requestBody, string method = "POST")
