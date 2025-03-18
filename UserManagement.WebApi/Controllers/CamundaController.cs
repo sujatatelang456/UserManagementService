@@ -11,6 +11,7 @@ namespace UserManagement.WebApi.Controllers
     {
         private readonly CamundaService _camundaService;
         private readonly IConfiguration _configuration;
+        
         public CamundaController(CamundaService camundaService, IConfiguration configuration) {
             _camundaService = camundaService;
             _configuration = configuration;
@@ -22,12 +23,26 @@ namespace UserManagement.WebApi.Controllers
         //    await _camundaService.StartProcess(processKey, asset);
         //    return Ok($"Process {processKey} started successfully with Invoice ID: {asset.AssetName}");
         //}
-        [HttpPost("Asset/StartProcess")]
-        public async Task<IActionResult> StartProcess(string processDefinitionId, AssetUploadRequest assetUploadRequest)
+        [HttpPost("StartProcess")]
+        public async Task<CamundaProcess> StartProcess(string processDefinitionId, AssetUploadRequest assetUploadRequest)
         {
             var getCamundaClusterId = _configuration["CamundaClusterID"];
-            await _camundaService.StartProcess(getCamundaClusterId, processDefinitionId,assetUploadRequest);
-            return Ok($"Process started successfully");
-        }        
+            return await _camundaService.StartProcess(getCamundaClusterId, processDefinitionId,assetUploadRequest);
+            // return Ok($"Process started successfully");
+        }
+        [HttpPost("AssignCamundaTask")]
+        public async Task<CamundaTask> AssignCamundaTask(string taskId, string assignee, string processInstanceKey)
+        {
+            var getCamundaClusterId = _configuration["CamundaClusterID"];
+            return await _camundaService.AssignCamundaTask(taskId, assignee, getCamundaClusterId, processInstanceKey);
+            // return Ok($"Process started successfully");
+        }
+        [HttpPost("CompleteCamundaTask")]
+        public async Task<CamundaTask> CompleteCamundaTask(string taskId, object variables)
+        {
+            var getCamundaClusterId = _configuration["CamundaClusterID"];
+            return await _camundaService.CompleteCamundaTask(taskId, getCamundaClusterId, variables);
+            // return Ok($"Process started successfully");
+        }
     }
 }
