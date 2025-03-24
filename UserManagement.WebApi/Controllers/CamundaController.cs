@@ -64,5 +64,13 @@ namespace UserManagement.WebApi.Controllers
             await _camundaService.CompleteCamundaTask(taskId, getCamundaClusterId, variables);
             // return Ok($"Process started successfully");
         }
+
+        [HttpGet("GetCamundaTaskVariables")]
+        public async Task<List<CamundaTaskVariable>> GetCamundaTaskVariables(string taskId)
+        {
+            var camundaClusterId = _configuration["CamundaClusterID"];
+            var variables = await _camundaService.GetTaskVariables(taskId, camundaClusterId);
+            return variables;
+        }
     }
 }

@@ -140,9 +140,11 @@ namespace UserManagement.Application.Services
             HttpClient _httpClient = new HttpClient();
             var values = new Dictionary<string, string>
             {
-                { "grant_type", "client_credentials" },
-                { "client_id", "zFey.6BmlPYuCbN-EnPlnRDud02cLh2E" },
-                { "client_secret", "H8-qO152.MLIiA3jFaQIIgh-DR4pgr~Gi05Yopeu9As6Mno3yxFAEbN144ZEvABB" },
+                 { "grant_type", "client_credentials" },
+                // { "client_id", "zFey.6BmlPYuCbN-EnPlnRDud02cLh2E" },
+                //{ "client_secret", "H8-qO152.MLIiA3jFaQIIgh-DR4pgr~Gi05Yopeu9As6Mno3yxFAEbN144ZEvABB" },
+                { "client_id", "qZikPp-vJM6z.5bEWCabhi~29cRMXl24" },
+                { "client_secret", "FwEOZSWWZKUQ4D73w.Ba8U65UOOh_SEXqT5o_yn1TbAKSiRiArTOQsT7~Y~tCHIN" },
                 { "audience", $"{audience}.camunda.io" }
             };
 
