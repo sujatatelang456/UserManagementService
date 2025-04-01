@@ -33,10 +33,19 @@ var app = builder.Build();
 app.UseMiddleware<RequestLoggingMiddleware>();
 
 // Configure the HTTP request pipeline.
+app.UseSwagger();
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
     app.UseSwaggerUI();
+}
+else if (app.Environment.IsProduction())
+{
+    
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "CAMUNDA API POC");
+        c.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();
