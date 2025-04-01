@@ -7,9 +7,11 @@ namespace UserManagement.Infrastructure.UnitOfWork
     {
         private readonly AppDbContext _context;
         public IUserRepository Users { get; }
-        public UnitOfWork(AppDbContext context, IUserRepository userRepository) { 
+        public IAssetRepository Assets { get; }
+        public UnitOfWork(AppDbContext context, IUserRepository userRepository, IAssetRepository assetRepository) { 
             _context = context;
             Users = userRepository;
+            Assets = assetRepository;
         }
         public void Dispose() { 
             _context.Dispose();
