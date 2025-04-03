@@ -12,6 +12,7 @@ namespace UserManagement.WebApi.Config
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterLazy<IUserRepository, UserRepository>().InstancePerLifetimeScope();
+            builder.RegisterLazy<IAssetRepository, AssetRepository>().InstancePerLifetimeScope();
             builder.RegisterLazy<IUnitOfWork, UnitOfWork>().InstancePerLifetimeScope();
             // builder.RegisterLazy<IUserService, UserService>().InstancePerLifetimeScope();
 

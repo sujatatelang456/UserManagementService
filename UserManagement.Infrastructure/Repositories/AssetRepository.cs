@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using UserManagement.Domain.Entities;
+using UserManagement.Domain.Interfaces;
 using UserManagement.Infrastructure.Data;
 
 namespace UserManagement.Infrastructure.Repositories
 {
-    public class AssetRepository
+    public class AssetRepository: IAssetRepository
     {
         private readonly AppDbContext _context;
         public AssetRepository(AppDbContext context)
