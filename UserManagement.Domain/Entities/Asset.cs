@@ -10,8 +10,8 @@ namespace UserManagement.Domain.Entities
     public class Asset
     {
         public string AssetId { get; set; }
-        [JsonIgnore]
-        public Guid Id { get; set; } = Guid.NewGuid();
+        //[JsonIgnore]
+        //public Guid Id { get; set; } = Guid.NewGuid();
         public string LoanNumber { get; set; }
         public string Address { get; set; }
         public string City { get; set; }

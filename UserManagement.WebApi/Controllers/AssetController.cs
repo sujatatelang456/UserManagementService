@@ -19,17 +19,17 @@ namespace UserManagement.WebApi.Controllers
             return await _assetService.GetAllAssets();
         }
 
-        [HttpGet("{id}")]
-        public async Task<Asset> GetAssetById(int id)
+        [HttpGet("{assetId}")]
+        public async Task<Asset> GetAssetById(string assetId)
         {
-            return await _assetService.GetAssetById(id);
+            return await _assetService.GetAssetById(assetId);
         }
 
         [HttpPost]
         public async Task<IActionResult> AddAsset(Asset asset)
         {
             await _assetService.AddAsset(asset);
-            return CreatedAtAction(nameof(GetAssetById), new { id = asset.Id }, asset);
+            return CreatedAtAction(nameof(GetAssetById), new { assetId = asset.AssetId}, asset);
         }
 
         [HttpPut]

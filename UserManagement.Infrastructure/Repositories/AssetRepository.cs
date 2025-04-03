@@ -32,9 +32,9 @@ namespace UserManagement.Infrastructure.Repositories
             return await _context.Assets.ToArrayAsync();
         }
 
-        public async Task<Asset> GetAssetById(int id)
+        public async Task<Asset> GetAssetById(string assetId)
         {
-            return await _context.Assets.FindAsync(id);
+            return await _context.Assets.FindAsync(assetId);
         }
 
         public async Task UpdateAsset(Asset asset)

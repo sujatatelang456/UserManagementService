@@ -10,7 +10,7 @@ namespace UserManagement.Domain.Interfaces
     public interface IAssetRepository
     {
         Task<IEnumerable<Asset>> GetAllAssets();
-        Task<Asset> GetAssetById(int id);
+        Task<Asset> GetAssetById(string assetId);
         Task AddAsset(Asset asset);
         Task UpdateAsset(Asset asset);
         Task DeleteAsset(int id);
