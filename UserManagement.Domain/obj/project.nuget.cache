@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "giq28Cahh0U=",
+  "dgSpecHash": "xXg+x0Bat5U=",
   "success": true,
-  "projectFilePath": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\UserManagement.Domain.csproj",
+  "projectFilePath": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Domain\\UserManagement.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

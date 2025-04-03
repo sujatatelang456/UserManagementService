@@ -9,3 +9,15 @@ D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManageme
 D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\refint\UserManagement.Domain.dll
 D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.pdb
 D:\IVLDocs\Xome\XomePOC\UserManagementService\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\ref\UserManagement.Domain.dll
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\bin\Debug\net8.0\UserManagement.Domain.deps.json
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\bin\Debug\net8.0\UserManagement.Domain.dll
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\bin\Debug\net8.0\UserManagement.Domain.pdb
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.AssemblyInfoInputs.cache
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.AssemblyInfo.cs
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.csproj.CoreCompileInputs.cache
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.sourcelink.json
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.dll
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\refint\UserManagement.Domain.dll
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\UserManagement.Domain.pdb
+D:\IVLDocs\Xome\XomePOC\API\UserManagementService\UserManagement.Domain\obj\Debug\net8.0\ref\UserManagement.Domain.dll

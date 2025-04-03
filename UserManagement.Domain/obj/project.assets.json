@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sujata.telang\\.nuget\\packages\\": {}
+    "C:\\Users\\Sujata.Telang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\UserManagement.Domain.csproj",
+      "projectUniqueName": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Domain\\UserManagement.Domain.csproj",
       "projectName": "UserManagement.Domain",
-      "projectPath": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\UserManagement.Domain.csproj",
-      "packagesPath": "C:\\Users\\sujata.telang\\.nuget\\packages\\",
-      "outputPath": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\obj\\",
+      "projectPath": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Domain\\UserManagement.Domain.csproj",
+      "packagesPath": "C:\\Users\\Sujata.Telang\\.nuget\\packages\\",
+      "outputPath": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sujata.telang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sujata.Telang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

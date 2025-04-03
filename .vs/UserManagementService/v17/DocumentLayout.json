@@ -1,66 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\",
+  "WorkspaceRootPath": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{487ADC8C-3138-4F5F-9F42-966205DB2F23}|UserManagement.Application\\UserManagement.Application.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.application\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{487ADC8C-3138-4F5F-9F42-966205DB2F23}|UserManagement.Application\\UserManagement.Application.csproj|solutionrelative:usermanagement.application\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4A42359-8398-4802-8D10-AFF6104D3D23}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.domain\\entities\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4A42359-8398-4802-8D10-AFF6104D3D23}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\entities\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.webapi\\middlewares\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\middlewares\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.webapi\\usermanagement.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\usermanagement.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4A42359-8398-4802-8D10-AFF6104D3D23}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4A42359-8398-4802-8D10-AFF6104D3D23}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{487ADC8C-3138-4F5F-9F42-966205DB2F23}|UserManagement.Application\\UserManagement.Application.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{487ADC8C-3138-4F5F-9F42-966205DB2F23}|UserManagement.Application\\UserManagement.Application.csproj|solutionrelative:usermanagement.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.infrastructure\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.infrastructure\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.webapi\\config\\autofacmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.webapi\\controllers\\assetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\controllers\\assetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.infrastructure\\repositories\\assetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632DEC7A-B46D-4CC7-AA26-B5F99857FC39}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\repositories\\assetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.webapi\\config\\autofacmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\config\\autofacmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4A42359-8398-4802-8D10-AFF6104D3D23}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4A42359-8398-4802-8D10-AFF6104D3D23}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4A42359-8398-4802-8D10-AFF6104D3D23}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E4A42359-8398-4802-8D10-AFF6104D3D23}|UserManagement.Domain\\UserManagement.Domain.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4A42359-8398-4802-8D10-AFF6104D3D23}|UserManagement.Domain\\UserManagement.Domain.csproj|solutionrelative:usermanagement.domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{487ADC8C-3138-4F5F-9F42-966205DB2F23}|UserManagement.Application\\UserManagement.Application.csproj|d:\\ivldocs\\xome\\xomepoc\\usermanagementservice\\usermanagementservice\\usermanagement.application\\usermanagement.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{487ADC8C-3138-4F5F-9F42-966205DB2F23}|UserManagement.Application\\UserManagement.Application.csproj|solutionrelative:usermanagement.application\\usermanagement.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|d:\\ivldocs\\xome\\xomepoc\\api\\usermanagementservice\\usermanagement.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E75902B5-B2B0-4B92-A3C8-541035B29BA6}|UserManagement.WebApi\\UserManagement.WebApi.csproj|solutionrelative:usermanagement.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,189 +50,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Asset.cs",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Domain\\Entities\\Asset.cs",
+              "RelativeDocumentMoniker": "UserManagement.Domain\\Entities\\Asset.cs",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Domain\\Entities\\Asset.cs",
+              "RelativeToolTip": "UserManagement.Domain\\Entities\\Asset.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T05:28:03.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssetRepository.cs",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Infrastructure\\Repositories\\AssetRepository.cs",
+              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Repositories\\AssetRepository.cs",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Infrastructure\\Repositories\\AssetRepository.cs",
+              "RelativeToolTip": "UserManagement.Infrastructure\\Repositories\\AssetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T05:14:59.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssetController.cs",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\Controllers\\AssetController.cs",
+              "RelativeDocumentMoniker": "UserManagement.WebApi\\Controllers\\AssetController.cs",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\Controllers\\AssetController.cs",
+              "RelativeToolTip": "UserManagement.WebApi\\Controllers\\AssetController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwB4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T05:04:25.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "UserManagement.WebApi\\Program.cs",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\Program.cs",
+              "RelativeToolTip": "UserManagement.WebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T06:51:03.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AutofacModule.cs",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\Config\\AutofacModule.cs",
+              "RelativeDocumentMoniker": "UserManagement.WebApi\\Config\\AutofacModule.cs",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\Config\\AutofacModule.cs",
+              "RelativeToolTip": "UserManagement.WebApi\\Config\\AutofacModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T06:15:36.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "UserManagement.WebApi\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "UserManagement.WebApi\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T06:15:03.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "UserManagement.WebApi\\appsettings.json",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.WebApi\\appsettings.json",
+              "RelativeToolTip": "UserManagement.WebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-04T09:04:41.952Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RequestLoggingMiddleware.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\Middlewares\\RequestLoggingMiddleware.cs",
-              "RelativeDocumentMoniker": "UserManagement.WebApi\\Middlewares\\RequestLoggingMiddleware.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\Middlewares\\RequestLoggingMiddleware.cs",
-              "RelativeToolTip": "UserManagement.WebApi\\Middlewares\\RequestLoggingMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "UserManagement.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T11:10:58.746Z",
+              "WhenOpened": "2025-03-04T05:13:27.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "UserManagement.Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T09:56:50.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "UserManagement.Application\\Services\\UserService.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Application\\Services\\UserService.cs",
-              "RelativeToolTip": "UserManagement.Application\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T06:33:48.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "UserManagement.WebApi\\Program.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\Program.cs",
-              "RelativeToolTip": "UserManagement.WebApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T06:51:03.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\appsettings.json",
-              "RelativeDocumentMoniker": "UserManagement.WebApi\\appsettings.json",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\appsettings.json",
-              "RelativeToolTip": "UserManagement.WebApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-04T09:04:41.952Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "UserManagement.WebApi\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\Controllers\\UserController.cs",
-              "RelativeToolTip": "UserManagement.WebApi\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBcAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T06:15:03.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserManagement.WebApi.csproj",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\UserManagement.WebApi.csproj",
-              "RelativeDocumentMoniker": "UserManagement.WebApi\\UserManagement.WebApi.csproj",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\UserManagement.WebApi.csproj",
-              "RelativeToolTip": "UserManagement.WebApi\\UserManagement.WebApi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-04T11:10:23.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "UserManagement.Domain\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "UserManagement.Domain\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T05:23:38.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "UserManagement.Domain\\Entities\\User.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\Entities\\User.cs",
-              "RelativeToolTip": "UserManagement.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T05:32:54.851Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Application\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "UserManagement.Application\\Services\\IUserService.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Application\\Services\\IUserService.cs",
-              "RelativeToolTip": "UserManagement.Application\\Services\\IUserService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T06:26:47.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "UserManagement.Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T06:34:52.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
-              "RelativeToolTip": "UserManagement.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T05:13:27.552Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Persistence\\AppDbContext.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeToolTip": "UserManagement.Infrastructure\\Persistence\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T09:56:50.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\Interfaces\\IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Domain\\Interfaces\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "UserManagement.Domain\\Interfaces\\IUnitOfWork.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Domain\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\API\\UserManagementService\\UserManagement.Domain\\Interfaces\\IUnitOfWork.cs",
               "RelativeToolTip": "UserManagement.Domain\\Interfaces\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T05:39:15.776Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AutofacModule.cs",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\Config\\AutofacModule.cs",
-              "RelativeDocumentMoniker": "UserManagement.WebApi\\Config\\AutofacModule.cs",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.WebApi\\Config\\AutofacModule.cs",
-              "RelativeToolTip": "UserManagement.WebApi\\Config\\AutofacModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T06:15:36.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserManagement.Application.csproj",
-              "DocumentMoniker": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Application\\UserManagement.Application.csproj",
-              "RelativeDocumentMoniker": "UserManagement.Application\\UserManagement.Application.csproj",
-              "ToolTip": "D:\\IVLDocs\\Xome\\XomePOC\\UserManagementService\\UserManagementService\\UserManagement.Application\\UserManagement.Application.csproj",
-              "RelativeToolTip": "UserManagement.Application\\UserManagement.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-04T05:22:06.107Z"
+              "WhenOpened": "2025-03-04T05:39:15.776Z",
+              "EditorCaption": ""
             }
           ]
         }
