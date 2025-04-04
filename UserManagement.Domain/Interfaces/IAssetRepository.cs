@@ -14,5 +14,6 @@ namespace UserManagement.Domain.Interfaces
         Task AddAsset(Asset asset);
         Task UpdateAsset(Asset asset);
         Task DeleteAsset(int id);
+        Task UpdateAssetStatus(string assetId, string assetStatus);
     }
 }
