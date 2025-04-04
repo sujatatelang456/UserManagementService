@@ -41,5 +41,15 @@ namespace UserManagement.Infrastructure.Repositories
         {
             _context.Assets.Update(asset);
         }
+
+        public async Task UpdateAssetStatus(string assetId, string assetStatus)
+        {
+            var asset = await _context.Assets.FindAsync(assetId);
+            if (asset != null)
+            {
+                asset.AssetStatus = assetStatus;
+                _context.Assets.Update(asset);
+            }
+        }
     }
 }

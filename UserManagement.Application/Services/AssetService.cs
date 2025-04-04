@@ -46,5 +46,21 @@ namespace UserManagement.Application.Services
             await _unitOfWork.Assets.UpdateAsset(asset);
             await _unitOfWork.SaveChangesAsync();
         }
+
+        public async Task<dynamic> UpdateAssetStatus(string assetId, string assetStatus, string processInstanceKey)
+        {
+            await _unitOfWork.Assets.UpdateAssetStatus(assetId, assetStatus);
+            await _unitOfWork.SaveChangesAsync();
+            
+            var asset = await _unitOfWork.Assets.GetAssetById(assetId);
+
+            if(asset != null)
+            {
+                var updatedAsset = new { assetId = asset.AssetId, assetStatus = asset.AssetStatus, processInstanceKey = processInstanceKey};
+                return updatedAsset;
+            }
+
+            return null;
+        }
     }
 }

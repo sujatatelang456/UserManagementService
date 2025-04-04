@@ -43,5 +43,12 @@ namespace UserManagement.WebApi.Controllers
         {
             await _assetService.DeleteAsset(id);
         }
+
+        [HttpPut("UpdateAssetStatus")]
+        public async Task<dynamic> UpdateAssetStatus(string assetId, string assetStatus, string processInstanceKey)
+        {
+            var asset = await _assetService.UpdateAssetStatus(assetId, assetStatus, processInstanceKey);
+            return asset;
+        }
     }
 }
