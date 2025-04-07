@@ -9,12 +9,20 @@ namespace UserManagement.Infrastructure.UnitOfWork
         public IUserRepository Users { get; }
         public IAssetRepository Assets { get; }
         public IValuationTypeRepository valuationTypes { get; }
-        public UnitOfWork(AppDbContext context, IUserRepository userRepository, IAssetRepository assetRepository, IValuationTypeRepository valuationTypesRepository)
+        public ILoadValuationRepository LoadValuations { get; }
+        public UnitOfWork(
+            AppDbContext context,
+            IUserRepository userRepository,
+            IAssetRepository assetRepository,
+            ILoadValuationRepository loadValuationRepository,
+            IValuationTypeRepository valuationTypesRepository
+            )
         {
             _context = context;
             Users = userRepository;
             Assets = assetRepository;
-            valuationTypes = valuationTypesRepository;  
+            valuationTypes = valuationTypesRepository;
+            LoadValuations = loadValuationRepository;
         }
         public void Dispose()
         {
