@@ -44,7 +44,7 @@ namespace UserManagement.WebApi.Controllers
         }
 
         [HttpGet("GetUserDetails")]
-        public async Task<User> GetUserDetails(string userName)
+        public async Task<dynamic> GetUserDetails(string userName)
         {
             var userDetails = await _userService.GetUserDetails(userName);
             return userDetails;

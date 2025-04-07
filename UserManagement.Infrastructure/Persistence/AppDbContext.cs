@@ -6,6 +6,7 @@ namespace UserManagement.Infrastructure.Data
 {
     public class AppDbContext : DbContext
     {
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<User> Users { get; set; }
 
@@ -15,11 +16,11 @@ namespace UserManagement.Infrastructure.Data
 
         public DbSet<LoadValuation> LoadValuations { get; set; }
 
-        public DbSet<ManualTask> ManualTasks { get; set; }
+        public DbSet<ManualTask> ManualTasks => Set<ManualTask>();
 
-        public DbSet<TaskFields> TaskFields { get; set; }
+        public DbSet<TaskFields> TaskFields => Set<TaskFields>();
 
-        public DbSet<UserTaskFieldMapping> UserTaskFieldMappings { get; set; }
+        public DbSet<UserTaskFieldMapping> UserTaskFieldMappings => Set<UserTaskFieldMapping>();
 
         public DbSet<SellerConfig> sellerConfigs { get; set; }
 
@@ -47,5 +48,7 @@ namespace UserManagement.Infrastructure.Data
                 new UserTaskFieldMapping { Id = 2, UserId = 4, TaskId = 2, AccessTaskFields = [""] }
             );
         }
+
+
     }
 }
