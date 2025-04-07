@@ -9,6 +9,7 @@ namespace UserManagement.Domain.Entities
 {
     public class LoadValuation
     {
+        public int Id { get; set; }
         public string AssetId { get; set; }  // : 29490
         public string ValuationEffectiveDate { get; set; } // : 06/05/2024
         public string ValuationType { get; set; } // : Automated Valuation Model

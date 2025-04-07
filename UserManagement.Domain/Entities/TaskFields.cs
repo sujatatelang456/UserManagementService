@@ -9,6 +9,7 @@ namespace UserManagement.Domain.Entities
 {
     public class TaskFields
     {
+        public int Id { get; set; }
         public int TaskId { get; set; }
         public List<string> TaskMappingFields { get; set; }
     }

@@ -23,6 +23,8 @@ builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterMod
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<CamundaService>();
 builder.Services.AddScoped<AssetService>();
+builder.Services.AddScoped<ValuationTypeService>();
+builder.Services.AddScoped<LoadValuationService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -32,6 +34,15 @@ builder.Services.AddSwaggerGen();
 builder.Host.UseSerilog((context, config) =>
     config.ReadFrom.Configuration(context.Configuration));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // <- React app URL on Azure
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 var app = builder.Build();
 
 app.UseMiddleware<RequestLoggingMiddleware>();
@@ -44,14 +55,14 @@ if (app.Environment.IsDevelopment())
 }
 else if (app.Environment.IsProduction())
 {
-    
+
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "CAMUNDA API POC");
         c.RoutePrefix = string.Empty;
     });
 }
-
+app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
