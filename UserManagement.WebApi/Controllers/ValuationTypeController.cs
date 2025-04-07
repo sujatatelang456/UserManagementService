@@ -6,11 +6,11 @@ namespace UserManagement.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuationController : ControllerBase
+    public class ValuationTypeController : ControllerBase
     {
         public readonly ValuationTypeService _valuationTypeService;
 
-        public ValuationController(ValuationTypeService valuationTypeService)
+        public ValuationTypeController(ValuationTypeService valuationTypeService)
         {
             _valuationTypeService = valuationTypeService;
         }

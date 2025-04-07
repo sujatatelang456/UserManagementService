@@ -13,6 +13,8 @@ namespace UserManagement.Infrastructure.Data
 
         public DbSet<ValuationType> ValuationTypes{ get; set; }
 
+        public DbSet<LoadValuation> LoadValuations { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
