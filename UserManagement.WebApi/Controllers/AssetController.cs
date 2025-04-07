@@ -26,10 +26,10 @@ namespace UserManagement.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddAsset(Asset asset)
+        public async Task<Asset> AddAsset(Asset asset)
         {
             await _assetService.AddAsset(asset);
-            return CreatedAtAction(nameof(GetAssetById), new { assetId = asset.AssetId}, asset);
+            return asset;
         }
 
         [HttpPut]
