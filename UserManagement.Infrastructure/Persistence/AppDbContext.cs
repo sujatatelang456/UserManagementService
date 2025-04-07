@@ -6,6 +6,7 @@ namespace UserManagement.Infrastructure.Data
 {
     public class AppDbContext : DbContext
     {
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<User> Users { get; set; }
 
@@ -14,6 +15,12 @@ namespace UserManagement.Infrastructure.Data
         public DbSet<ValuationType> ValuationTypes { get; set; }
 
         public DbSet<LoadValuation> LoadValuations { get; set; }
+
+        public DbSet<ManualTask> ManualTasks => Set<ManualTask>();
+
+        public DbSet<TaskFields> TaskFields => Set<TaskFields>();
+
+        public DbSet<UserTaskFieldMapping> UserTaskFieldMappings => Set<UserTaskFieldMapping>();
 
         public DbSet<SellerConfig> sellerConfigs { get; set; }
 
@@ -33,13 +40,15 @@ namespace UserManagement.Infrastructure.Data
                 new ManualTask { Id = 2, TaskId = 2, TaskName = "LoadValuationTask" }
             );
             modelBuilder.Entity<TaskFields>().HasData(
-                new TaskFields { Id = 1, TaskId = 1, TaskMappingFields = ["valuationEffectiveDate", "valuationType", "valuationExpires", "inspectionType", "preparedBy", "company", "asIsValue", "repairedValue", "repairedEstimate", "condition", "comments"] },
-                new TaskFields { Id = 2, TaskId = 2, TaskMappingFields = [""] }
+                new TaskFields { Id = 1 , TaskId = 1, TaskMappingFields = ["valuationEffectiveDate", "valuationType", "valuationExpires", "inspectionType", "preparedBy", "company", "asIsValue", "repairedValue", "repairedEstimate", "condition", "comments"] },
+                new TaskFields { Id = 2, TaskId = 2, TaskMappingFields = ["address1", "address2", "valuationExpires", "city", "state", "zipCode", "county", "apn", "bpoValue", "transactionSubType", "sellerCode", "sellerSubCode", "propertyType", "bedRooms", "fullBathrooms", "partialBathrooms", "emv"] }
             );
             modelBuilder.Entity<UserTaskFieldMapping>().HasData(
                 new UserTaskFieldMapping { Id = 1, UserId = 4, TaskId = 1, AccessTaskFields = ["valuationEffectiveDate", "valuationType", "valuationExpires", "inspectionType", "preparedBy", "company", "asIsValue", "repairedValue", "repairedEstimate", "condition", "comments"] },
                 new UserTaskFieldMapping { Id = 2, UserId = 4, TaskId = 2, AccessTaskFields = [""] }
             );
         }
+
+
     }
 }

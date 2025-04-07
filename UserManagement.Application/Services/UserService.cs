@@ -38,5 +38,26 @@ namespace UserManagement.Application.Services
             await _unitOfWork.Users.UpdateUser(user);
             await _unitOfWork.SaveChangesAsync();
         }
+
+        public async Task<dynamic> GetUserDetails(string username)
+        {
+            var users = await _unitOfWork.Users.GetAllUsers();
+
+            var user = users.Where(u => u.Email == username).FirstOrDefault() ?? new User();
+
+            var tasks = await _unitOfWork.Users.GetAllCamundaTasks();
+            var taskFieldMappings = await _unitOfWork.Users.GetUserTaskFieldMappings();
+
+            var mapping = taskFieldMappings.FirstOrDefault(tfm => tfm.UserId == user.Id);
+
+            var userDetails = new { firstName = user.FirstName,
+                                    lastName = user.LastName,
+                                    username = user.Email,
+                                    accessfields = mapping,
+                                  };
+
+            return userDetails;
+
+        }
     }
 }

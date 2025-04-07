@@ -9,5 +9,12 @@ namespace UserManagement.Domain.Interfaces
         Task AddUser(User User);
         Task UpdateUser(User User);
         Task DeleteUser(int id);
+
+        Task<List<ManualTask>> GetAllCamundaTasks();
+        Task<List<TaskFields>> GetAllCamundaTaskFields();
+
+        Task<List<UserTaskFieldMapping>> GetUserTaskFieldMappings();
+
+
     }
 }
