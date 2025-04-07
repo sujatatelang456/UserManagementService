@@ -8,6 +8,7 @@ namespace UserManagement.Domain.Interfaces
         IAssetRepository Assets { get; }
         IValuationTypeRepository valuationTypes { get; }
         ILoadValuationRepository LoadValuations { get; }
+        ISellerConfigRepository SellerConfig { get; }
         Task<int> SaveChangesAsync();
     }
 }
