@@ -8,6 +8,7 @@ namespace UserManagement.Domain.Entities
 {
     public class ManualTask
     {
+        public int Id { get; set; }
         public int TaskId { get; set; }
         public string TaskName { get; set; }
     }
