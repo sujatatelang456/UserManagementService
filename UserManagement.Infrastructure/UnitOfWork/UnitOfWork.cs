@@ -10,12 +10,14 @@ namespace UserManagement.Infrastructure.UnitOfWork
         public IAssetRepository Assets { get; }
         public IValuationTypeRepository valuationTypes { get; }
         public ILoadValuationRepository LoadValuations { get; }
+        public ISellerConfigRepository SellerConfig { get; }
         public UnitOfWork(
             AppDbContext context,
             IUserRepository userRepository,
             IAssetRepository assetRepository,
             ILoadValuationRepository loadValuationRepository,
-            IValuationTypeRepository valuationTypesRepository
+            IValuationTypeRepository valuationTypesRepository,
+            ISellerConfigRepository sellerConfigRepository
             )
         {
             _context = context;
@@ -23,6 +25,7 @@ namespace UserManagement.Infrastructure.UnitOfWork
             Assets = assetRepository;
             valuationTypes = valuationTypesRepository;
             LoadValuations = loadValuationRepository;
+            SellerConfig = sellerConfigRepository;
         }
         public void Dispose()
         {

@@ -25,6 +25,7 @@ builder.Services.AddScoped<CamundaService>();
 builder.Services.AddScoped<AssetService>();
 builder.Services.AddScoped<ValuationTypeService>();
 builder.Services.AddScoped<LoadValuationService>();
+builder.Services.AddScoped<SellerConfigService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
