@@ -39,5 +39,20 @@ namespace UserManagement.Infrastructure.Repositories
         {
             _context.Users.Update(User);
         }
+
+        public async Task<List<ManualTask>> GetAllCamundaTasks()
+        {
+            return _context.ManualTasks.ToList();
+        }
+
+        public async Task<List<TaskFields>> GetAllCamundaTaskFields()
+        {
+            return _context.TaskFields.ToList();
+        }
+
+        public async Task<List<UserTaskFieldMapping>> GetUserTaskFieldMappings()
+        {
+            return _context.UserTaskFieldMappings.ToList();
+        }
     }
 }

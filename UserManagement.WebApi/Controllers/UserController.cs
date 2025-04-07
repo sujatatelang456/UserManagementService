@@ -43,10 +43,11 @@ namespace UserManagement.WebApi.Controllers
             await _userService.DeleteUser(id);
         }
 
-        //[HttpGet]
-        //public async Task<User> GetUserDetails(string userName)
-        //{
-        //    return null;
-        //}
+        [HttpGet("GetUserDetails")]
+        public async Task<User> GetUserDetails(string userName)
+        {
+            var userDetails = await _userService.GetUserDetails(userName);
+            return userDetails;
+        }
     }
 }

@@ -15,6 +15,12 @@ namespace UserManagement.Infrastructure.Data
 
         public DbSet<LoadValuation> LoadValuations { get; set; }
 
+        public DbSet<ManualTask> ManualTasks { get; set; }
+
+        public DbSet<TaskFields> TaskFields { get; set; }
+
+        public DbSet<UserTaskFieldMapping> UserTaskFieldMappings { get; set; }
+
         public DbSet<SellerConfig> sellerConfigs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -33,8 +39,8 @@ namespace UserManagement.Infrastructure.Data
                 new ManualTask { Id = 2, TaskId = 2, TaskName = "LoadValuationTask" }
             );
             modelBuilder.Entity<TaskFields>().HasData(
-                new TaskFields { Id = 1, TaskId = 1, TaskMappingFields = ["valuationEffectiveDate", "valuationType", "valuationExpires", "inspectionType", "preparedBy", "company", "asIsValue", "repairedValue", "repairedEstimate", "condition", "comments"] },
-                new TaskFields { Id = 2, TaskId = 2, TaskMappingFields = [""] }
+                new TaskFields { Id = 1 , TaskId = 1, TaskMappingFields = ["valuationEffectiveDate", "valuationType", "valuationExpires", "inspectionType", "preparedBy", "company", "asIsValue", "repairedValue", "repairedEstimate", "condition", "comments"] },
+                new TaskFields { Id = 2, TaskId = 2, TaskMappingFields = ["address1", "address2", "valuationExpires", "city", "state", "zipCode", "county", "apn", "bpoValue", "transactionSubType", "sellerCode", "sellerSubCode", "propertyType", "bedRooms", "fullBathrooms", "partialBathrooms", "emv"] }
             );
             modelBuilder.Entity<UserTaskFieldMapping>().HasData(
                 new UserTaskFieldMapping { Id = 1, UserId = 4, TaskId = 1, AccessTaskFields = ["valuationEffectiveDate", "valuationType", "valuationExpires", "inspectionType", "preparedBy", "company", "asIsValue", "repairedValue", "repairedEstimate", "condition", "comments"] },
