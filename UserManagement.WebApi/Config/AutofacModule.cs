@@ -15,6 +15,7 @@ namespace UserManagement.WebApi.Config
             builder.RegisterLazy<IAssetRepository, AssetRepository>().InstancePerLifetimeScope();
             builder.RegisterLazy<IValuationTypeRepository, ValuationTypeRepository>().InstancePerLifetimeScope();
             builder.RegisterLazy<ILoadValuationRepository, LoadValuationRepository>().InstancePerLifetimeScope();
+            builder.RegisterLazy<ISellerConfigRepository, SellerConfigRepository>().InstancePerLifetimeScope();
             builder.RegisterLazy<IUnitOfWork, UnitOfWork>().InstancePerLifetimeScope();
             // builder.RegisterLazy<IUserService, UserService>().InstancePerLifetimeScope();
 

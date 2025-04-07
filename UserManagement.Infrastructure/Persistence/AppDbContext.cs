@@ -15,6 +15,8 @@ namespace UserManagement.Infrastructure.Data
 
         public DbSet<LoadValuation> LoadValuations { get; set; }
 
+        public DbSet<SellerConfig> sellerConfigs { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
