@@ -22,7 +22,8 @@ namespace UserManagement.Infrastructure.Data
 
         public DbSet<UserTaskFieldMapping> UserTaskFieldMappings => Set<UserTaskFieldMapping>();
 
-        public DbSet<SellerConfig> sellerConfigs { get; set; }
+        public DbSet<SellerConfig> sellerConfigs => Set<SellerConfig>();
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -46,6 +47,9 @@ namespace UserManagement.Infrastructure.Data
             modelBuilder.Entity<UserTaskFieldMapping>().HasData(
                 new UserTaskFieldMapping { Id = 1, UserId = 4, TaskId = 1, AccessTaskFields = ["valuationEffectiveDate", "valuationType", "valuationExpires", "inspectionType", "preparedBy", "company", "asIsValue", "repairedValue", "repairedEstimate", "condition", "comments"] },
                 new UserTaskFieldMapping { Id = 2, UserId = 4, TaskId = 2, AccessTaskFields = [""] }
+            );
+            modelBuilder.Entity<SellerConfig>().HasData(
+                new SellerConfig { Id = 1, ConfigName = "FundsTracking", Status = true}
             );
         }
 

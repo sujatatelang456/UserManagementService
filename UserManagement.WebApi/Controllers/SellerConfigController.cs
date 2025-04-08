@@ -21,5 +21,11 @@ namespace UserManagement.WebApi.Controllers
         {
             return await _sellerConfigService.GetSellerConfigAsync();
         }
+
+        [HttpPut("Toggle")]
+        public async Task<SellerConfig> ToggleSellerConfig()
+        {
+            return await _sellerConfigService.ToggleSellerConfig();
+        }
     }
 }
