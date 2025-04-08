@@ -48,9 +48,9 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
+
 var app = builder.Build();
 app.UseCors("AllowFrontend");
-app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 using (var scope = app.Services.CreateScope())
 {

@@ -28,11 +28,11 @@ namespace UserManagement.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>().HasData(
-                new User { Id = 1, FirstName = "Sujata", LastName = "Telang", Email = "sujata.telang@infovision.com", Role = "Asset Managet" },
-                new User { Id = 2, FirstName = "Kiran", LastName = "patwardhan", Email = "kiran.patwardhan@infovision.com", Role = "Auction Manager" },
-                new User { Id = 3, FirstName = "Sujit", LastName = "mhetre", Email = "sujit.mhetre@infovision.com", Role = "Marketing Specialist" },
-                new User { Id = 4, FirstName = "Tejas", LastName = "deogadkar", Email = "tejas.deogadkar@infovision.com", Role = "Asset Managet" },
-                new User { Id = 5, FirstName = "dilipkumar", LastName = "pottigari", Email = "dilipkumar.pottigari@infovision.com", Role = "Asset Managet" }
+                new User { Id = 1, FirstName = "Sujata", LastName = "Telang", Email = "sujata.telang@infovision.com", Role = "Asset Manager" },
+                new User { Id = 2, FirstName = "Kiran", LastName = "Patwardhan", Email = "kiran.patwardhan@infovision.com", Role = "Auction Manager" },
+                new User { Id = 3, FirstName = "Sujit", LastName = "Mhetre", Email = "sujit.mhetre@infovision.com", Role = "Marketing Specialist" },
+                new User { Id = 4, FirstName = "Tejas", LastName = "Deogadkar", Email = "tejas.deogadkar@infovision.com", Role = "Asset Manager" },
+                new User { Id = 5, FirstName = "Dilipkumar", LastName = "Pottigari", Email = "dilipkumar.pottigari@infovision.com", Role = "Asset Manager" }
             );
 
             modelBuilder.Entity<ManualTask>().HasData(
