@@ -9,7 +9,7 @@ namespace UserManagement.Domain.Entities
     public class SellerConfig
     {
         public int Id { get; set; }
-        public string FundTracking { get; set; }
+        public string ConfigName { get; set; }
 
         public bool Status { get; set; }
     }

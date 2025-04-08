@@ -10,5 +10,6 @@ namespace UserManagement.Domain.Interfaces
     public interface ISellerConfigRepository
     {
         Task<SellerConfig> GetSellerConfigAsync();
+        Task<SellerConfig> ToggleSellerConfig();
     }
 }

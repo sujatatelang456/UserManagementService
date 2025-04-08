@@ -22,5 +22,12 @@ namespace UserManagement.Application.Services
             return sellerConfig;
         }
 
+        public async Task<SellerConfig> ToggleSellerConfig()
+        {
+            var sellerConfig = await _unitOfWork.SellerConfig.ToggleSellerConfig();
+            await _unitOfWork.SaveChangesAsync();
+
+            return sellerConfig;
+        }
     }
 }
