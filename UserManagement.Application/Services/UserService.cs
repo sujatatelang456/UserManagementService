@@ -48,12 +48,23 @@ namespace UserManagement.Application.Services
             var tasks = await _unitOfWork.Users.GetAllCamundaTasks();
             var taskFieldMappings = await _unitOfWork.Users.GetUserTaskFieldMappings();
 
-            var mapping = taskFieldMappings.FirstOrDefault(tfm => tfm.UserId == user.Id);
+            var mapping = taskFieldMappings.Where(tfm => tfm.UserId == user.Id).Select(x => new { x.TaskId, x.AccessTaskFields});
+
+            var result = mapping.Join(tasks,
+                           s => s.TaskId,
+                           g => g.TaskId,
+                           (s, g) => new
+                           {
+                               s.AccessTaskFields,
+                               g.TaskName
+                           });
+
 
             var userDetails = new { firstName = user.FirstName,
                                     lastName = user.LastName,
                                     username = user.Email,
-                                    accessfields = mapping,
+                                    role = user.Role,
+                                    accessControls = result,
                                   };
 
             return userDetails;
