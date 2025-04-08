@@ -38,12 +38,19 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173") // <- React app URL on Azure
+        policy.WithOrigins(
+            "http://localhost:5173",
+            "http://20.197.15.82:8090",
+            "http://20.197.15.82:8080",
+            "*" // <- Allow all origins for development
+            ) // <- React app URL on Azure
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
 });
 var app = builder.Build();
+app.UseCors("AllowFrontend");
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 using (var scope = app.Services.CreateScope())
 {
@@ -52,7 +59,6 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.UseMiddleware<RequestLoggingMiddleware>();
-
 // Configure the HTTP request pipeline.
 app.UseSwagger();
 if (app.Environment.IsDevelopment())
@@ -68,7 +74,7 @@ else if (app.Environment.IsProduction())
         c.RoutePrefix = string.Empty;
     });
 }
-app.UseCors("AllowFrontend");
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
