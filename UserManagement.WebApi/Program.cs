@@ -34,24 +34,46 @@ builder.Services.AddSwaggerGen();
 builder.Host.UseSerilog((context, config) =>
     config.ReadFrom.Configuration(context.Configuration));
 
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowFrontend", policy =>
+//    {
+//        //    policy.WithOrigins(
+//        //        "http://localhost:5173",
+//        //        "http://20.197.15.82:8090",
+//        //        "http://20.197.15.82:8080",
+//        //        "*" // <- Allow all origins for development
+//        //        ) // <- React app URL on Azure
+//        //          .AllowAnyMethod()
+//        //          .AllowAnyHeader()
+//        //          .AllowCredentials()
+//        //          .AllowAnyOrigin();
+//        //});
+//        policy.WithOrigins(
+//        "*" // <- Allow all origins for development
+//        ) // <- React app URL on Azure
+//          .AllowAnyMethod()
+//          .AllowAnyHeader()
+//          .AllowCredentials()
+//          .AllowAnyOrigin();
+//    });
+
+//});
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend", policy =>
-    {
-        policy.WithOrigins(
-            "http://localhost:5173",
-            "http://20.197.15.82:8090",
-            "http://20.197.15.82:8080",
-            "*" // <- Allow all origins for development
-            ) // <- React app URL on Azure
-              .AllowAnyMethod()
-              .AllowAnyHeader()
-              .AllowAnyOrigin();
+   options.AddPolicy("AllowAll", policy =>
+{
+    policy
+        .AllowAnyOrigin()       // Allow all domains
+        .AllowAnyHeader()       // Allow all headers
+        .AllowAnyMethod();      // Allow all HTTP methods
+});
     });
 });
 
 var app = builder.Build();
-app.UseCors("AllowFrontend");
+app.UseCors("AllowAll");
 
 using (var scope = app.Services.CreateScope())
 {
