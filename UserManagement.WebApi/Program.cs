@@ -45,7 +45,9 @@ builder.Services.AddCors(options =>
             "*" // <- Allow all origins for development
             ) // <- React app URL on Azure
               .AllowAnyMethod()
-              .AllowAnyHeader();
+              .AllowAnyHeader()
+              .AllowCredentials()
+              .AllowAnyOrigin();
     });
 });
 
