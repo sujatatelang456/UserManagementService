@@ -62,14 +62,16 @@ builder.Host.UseSerilog((context, config) =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy
-            .AllowAnyOrigin()       // Allow all domains
-            .AllowAnyHeader()       // Allow all headers
-            .AllowAnyMethod();      // Allow all HTTP methods
+   options.AddPolicy("AllowAll", policy =>
+{
+    policy
+        .AllowAnyOrigin()       // Allow all domains
+        .AllowAnyHeader()       // Allow all headers
+        .AllowAnyMethod();      // Allow all HTTP methods
+});
     });
 });
+
 var app = builder.Build();
 app.UseCors("AllowAll");
 
