@@ -34,7 +34,8 @@ namespace UserManagement.Infrastructure.Repositories
 
         public async Task<Asset> GetAssetById(string assetId)
         {
-            return await _context.Assets.FindAsync(assetId);
+            var asset = _context.Assets.FirstOrDefault(a => a.AssetId == assetId) ?? new Asset();
+            return asset;
         }
 
         public async Task UpdateAsset(Asset asset)
@@ -44,7 +45,7 @@ namespace UserManagement.Infrastructure.Repositories
 
         public async Task UpdateAssetStatus(string assetId, string assetStatus)
         {
-            var asset = await _context.Assets.FindAsync(assetId);
+            var asset =  _context.Assets.FirstOrDefault(a=> a.AssetId == assetId)??new Asset();
             if (asset != null)
             {
                 asset.AssetStatus = assetStatus;
