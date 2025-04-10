@@ -50,5 +50,11 @@ namespace UserManagement.WebApi.Controllers
             var asset = await _assetService.UpdateAssetStatus(assetId, assetStatus, processInstanceKey);
             return asset;
         }
+
+        [HttpPost("TriggerExternalSystemEvent")]
+        public async Task TriggerExternalSystemEvent(string assetId)
+        {
+            await _assetService.TriggerExternalSystemEvent(assetId);
+        }
     }
 }

@@ -26,13 +26,10 @@ namespace UserManagement.Infrastructure.Repositories
 
         public async Task<SellerConfig> ToggleSellerConfig()
         {
-            if (_context.sellerConfigs.FirstOrDefault().Status)
+            var sellerConfig = _context.sellerConfigs.FirstOrDefault();
+            if (sellerConfig != null)
             {
-                _context.sellerConfigs.FirstOrDefault().Status = false;
-            }
-            else
-            {
-                _context.sellerConfigs.FirstOrDefault().Status = true;
+                sellerConfig.Status = !sellerConfig.Status;
             }
 
             return await _context.sellerConfigs.FirstOrDefaultAsync();

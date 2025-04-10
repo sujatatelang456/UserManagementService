@@ -1,5 +1,6 @@
 ﻿using UserManagement.Domain.Entities;
 using UserManagement.Domain.Interfaces;
+using Microsoft.Extensions.Options;
 
 namespace UserManagement.Application.Services
 {
@@ -7,12 +8,15 @@ namespace UserManagement.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly CamundaService _camundaService;
+        private readonly string _connectionString;
+        private readonly ServiceBusPublisher _publisher;
 
         // , IUserService userService
-        public AssetService(IUnitOfWork unitOfWork, CamundaService camundaService)
+        public AssetService(IUnitOfWork unitOfWork, CamundaService camundaService, ServiceBusPublisher publisher)
         {
             _unitOfWork = unitOfWork;
             _camundaService = camundaService;
+            _publisher = publisher;
         }
 
         public async Task AddAsset(Asset asset)
@@ -51,16 +55,42 @@ namespace UserManagement.Application.Services
         {
             await _unitOfWork.Assets.UpdateAssetStatus(assetId, assetStatus);
             await _unitOfWork.SaveChangesAsync();
-            
+
             var asset = await _unitOfWork.Assets.GetAssetById(assetId);
 
-            if(asset != null)
+            if (asset != null)
             {
-                var updatedAsset = new { assetId = asset.AssetId, assetStatus = asset.AssetStatus, processInstanceKey = processInstanceKey};
+                var updatedAsset = new { assetId = asset.AssetId, assetStatus = asset.AssetStatus, processInstanceKey = processInstanceKey };
+
+                if (assetStatus.ToLower().Equals("cancel") || assetStatus.ToLower().Equals("hold"))
+                {
+                    string messageBody = $@"{{
+                                          ""name"": ""remotebidding"",
+                                          ""correlationKey"": ""{asset.AssetId}""
+                                         }}";
+
+
+                    await _publisher.SendMessageAsync(messageBody);
+                }
+
                 return updatedAsset;
             }
 
             return null;
+        }
+
+        public async Task TriggerExternalSystemEvent(string assetId)
+        {
+                string messageBody = $@"{{
+                                          ""name"": ""remotebidding"",
+                                          ""correlationKey"": ""{assetId}"",
+                                          ""variables"": {{
+                                                            ""sold"": ""YES""
+                                                         }}
+                                         }}";
+
+
+                await _publisher.SendMessageAsync(messageBody);
         }
     }
 }

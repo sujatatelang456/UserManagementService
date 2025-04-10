@@ -6,6 +6,7 @@ using UserManagement.Application.Services;
 using UserManagement.Infrastructure.Data;
 using UserManagement.WebApi.Config;
 using UserManagement.WebApi.Middlewares;
+using Azure.Messaging.ServiceBus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,12 +20,16 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDataba
 // configure dependencies using autofac
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterModule(new AutofacModule()));
+builder.Services.Configure<ServiceBusSettings>(
+    builder.Configuration.GetSection("AzureServiceBus"));
+
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<CamundaService>();
 builder.Services.AddScoped<AssetService>();
 builder.Services.AddScoped<ValuationTypeService>();
 builder.Services.AddScoped<LoadValuationService>();
 builder.Services.AddScoped<SellerConfigService>();
+builder.Services.AddScoped<ServiceBusPublisher>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -33,6 +38,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Host.UseSerilog((context, config) =>
     config.ReadFrom.Configuration(context.Configuration));
+
+
 
 //builder.Services.AddCors(options =>
 //{
