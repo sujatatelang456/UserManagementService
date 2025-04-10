@@ -21,7 +21,7 @@ namespace UserManagement.Application.Services
                 variables = variables
             };
 
-            var url = $"https://syd-1.zeebe.camunda.io:443/{clusterId}/v2/process-instances";
+            var url = $"https://dsm-1.zeebe.camunda.io:443/{clusterId}/v2/process-instances";
             HttpResponseMessage response = await GetHttpResponseMessage(url, "zeebe", requestBody);
 
             // Read and display response
@@ -46,7 +46,7 @@ namespace UserManagement.Application.Services
 
             if (assigntask != null)
             {
-                var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v2/user-tasks/{taskId}/assignment";
+                var url = $"https://dsm-1.tasklist.camunda.io/{clusterId}/v2/user-tasks/{taskId}/assignment";
                 HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", requestBody, "POST");
 
                 string jsonString = await response.Content.ReadAsStringAsync();
@@ -57,7 +57,7 @@ namespace UserManagement.Application.Services
 
         public async Task GetTaskDetails(string taskId, string clusterId)
         {
-            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v1/tasks/{taskId}";
+            var url = $"https://dsm-1.tasklist.camunda.io/{clusterId}/v1/tasks/{taskId}";
             HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", new object());
         }
 
@@ -68,7 +68,7 @@ namespace UserManagement.Application.Services
                 processInstanceKey = processInstanceKey
             };
 
-            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v1/tasks/search";
+            var url = $"https://dsm-1.tasklist.camunda.io/{clusterId}/v1/tasks/search";
             HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", requestBody);
 
             string jsonString = await response.Content.ReadAsStringAsync();
@@ -84,7 +84,7 @@ namespace UserManagement.Application.Services
                 processInstanceKey = processInstanceKey
             };
 
-            var url = $"https://syd-1.operate.camunda.io/{clusterId}/v1/variables/search";
+            var url = $"https://dsm-1.operate.camunda.io/{clusterId}/v1/variables/search";
             HttpResponseMessage response = await GetHttpResponseMessage(url, "operate", requestBody);
         }
 
@@ -92,7 +92,7 @@ namespace UserManagement.Application.Services
         {
             var requestBody = new { };
 
-            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v1/tasks/{taskId}/variables/search";
+            var url = $"https://dsm-1.tasklist.camunda.io/{clusterId}/v1/tasks/{taskId}/variables/search";
             HttpResponseMessage response = await GetHttpResponseMessage(url, "tasklist", requestBody);
 
             string jsonString = await response.Content.ReadAsStringAsync();
@@ -112,7 +112,7 @@ namespace UserManagement.Application.Services
 
             var intTaskId = Convert.ToInt64(taskId);
 
-            var url = $"https://syd-1.tasklist.camunda.io/{clusterId}/v2/user-tasks/{intTaskId}/completion";
+            var url = $"https://dsm-1.tasklist.camunda.io/{clusterId}/v2/user-tasks/{intTaskId}/completion";
             await GetHttpResponseMessage(url, "tasklist", requestBody);
         }
 
@@ -143,8 +143,8 @@ namespace UserManagement.Application.Services
                  { "grant_type", "client_credentials" },
                 // { "client_id", "zFey.6BmlPYuCbN-EnPlnRDud02cLh2E" },
                 //{ "client_secret", "H8-qO152.MLIiA3jFaQIIgh-DR4pgr~Gi05Yopeu9As6Mno3yxFAEbN144ZEvABB" },
-                { "client_id", "qZikPp-vJM6z.5bEWCabhi~29cRMXl24" },
-                { "client_secret", "FwEOZSWWZKUQ4D73w.Ba8U65UOOh_SEXqT5o_yn1TbAKSiRiArTOQsT7~Y~tCHIN" },
+                { "client_id", "4.ov6KdTVNRXE49f.GAwq9qMNFgSq915" },
+                { "client_secret", "jJPMwBmzEb3XojD~OI3pHsEcrltEAljKFcyE4VC9Cq7SofcjddKuApPNiq7thsjw" },
                 { "audience", $"{audience}.camunda.io" }
             };
 
