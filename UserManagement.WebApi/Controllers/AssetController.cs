@@ -52,9 +52,9 @@ namespace UserManagement.WebApi.Controllers
         }
 
         [HttpPost("TriggerExternalSystemEvent")]
-        public async Task TriggerExternalSystemEvent(string assetId)
+        public async Task TriggerExternalSystemEvent(string assetId, string eventName)
         {
-            await _assetService.TriggerExternalSystemEvent(assetId);
+            await _assetService.TriggerExternalSystemEvent(assetId, eventName);
         }
     }
 }

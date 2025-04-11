@@ -79,9 +79,48 @@ namespace UserManagement.Application.Services
             return null;
         }
 
+        public async Task TriggerExternalSystemEvent(string assetId, string eventName)
+        {
+            var messageBody = string.Empty;
+
+            switch (eventName.ToLower())
+            {
+                case "sold":
+
+                    messageBody = $@"{{
+                                          ""name"": ""remotebidding"",
+                                          ""correlationKey"": ""{assetId}"",
+                                          ""variables"": {{
+                                                            ""sold"": ""YES""
+                                                         }}
+                                         }}";
+                    break;
+                case "hold":
+                    messageBody = $@"{{
+                                          ""name"": ""hold"",
+                                          ""correlationKey"": ""{assetId}""
+                                         }}";
+                    break;
+                case "unhold":
+                    messageBody = $@"{{
+                                          ""name"": ""unhold"",
+                                          ""correlationKey"": ""{assetId}""
+                                         }}";
+                    break;
+                case "cancel":
+                    messageBody = $@"{{
+                                          ""name"": ""cancel"",
+                                          ""correlationKey"": ""{assetId}""
+                                         }}";
+                    break;
+            }
+                
+            await _publisher.SendMessageAsync(messageBody);
+        }
+
         public async Task TriggerExternalSystemEvent(string assetId)
         {
-                string messageBody = $@"{{
+            string messageBody = $@"{{
                                           ""name"": ""remotebidding"",
                                           ""correlationKey"": ""{assetId}"",
                                           ""variables"": {{
@@ -90,7 +129,7 @@ namespace UserManagement.Application.Services
                                          }}";
 
 
-                await _publisher.SendMessageAsync(messageBody);
+            await _publisher.SendMessageAsync(messageBody);
         }
     }
 }
