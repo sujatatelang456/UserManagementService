@@ -97,8 +97,11 @@ namespace UserManagement.Application.Services
                     break;
                 case "hold":
                     messageBody = $@"{{
-                                          ""name"": ""hold"",
-                                          ""correlationKey"": ""{assetId}""
+                                          ""name"": ""holdOrCancel"",
+                                          ""correlationKey"": ""{assetId}"",
+                                          ""variables"": {{
+                                                            ""hold"": ""true""
+                                                         }}
                                          }}";
                     break;
                 case "unhold":
@@ -109,8 +112,11 @@ namespace UserManagement.Application.Services
                     break;
                 case "cancel":
                     messageBody = $@"{{
-                                          ""name"": ""cancel"",
-                                          ""correlationKey"": ""{assetId}""
+                                          ""name"": ""holdOrCancel"",
+                                          ""correlationKey"": ""{assetId}"",
+                                          ""variables"": {{
+                                                            ""hold"": ""false""
+                                                         }}
                                          }}";
                     break;
             }
