@@ -100,7 +100,7 @@ namespace UserManagement.Application.Services
                                           ""name"": ""holdOrCancel"",
                                           ""correlationKey"": ""{assetId}"",
                                           ""variables"": {{
-                                                            ""hold"": ""true""
+                                                            ""hold"": true
                                                          }}
                                          }}";
                     break;
@@ -115,7 +115,7 @@ namespace UserManagement.Application.Services
                                           ""name"": ""holdOrCancel"",
                                           ""correlationKey"": ""{assetId}"",
                                           ""variables"": {{
-                                                            ""hold"": ""false""
+                                                            ""hold"": false
                                                          }}
                                          }}";
                     break;
