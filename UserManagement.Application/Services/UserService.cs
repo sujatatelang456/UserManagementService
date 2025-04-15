@@ -43,7 +43,7 @@ namespace UserManagement.Application.Services
         {
             var users = await _unitOfWork.Users.GetAllUsers();
 
-            var user = users.Where(u => u.Email == username).FirstOrDefault() ?? new User();
+            var user = users.Where(u => u.Email.ToLower() == username.ToLower()).FirstOrDefault() ?? new User();
 
             var tasks = await _unitOfWork.Users.GetAllCamundaTasks();
             var taskFieldMappings = await _unitOfWork.Users.GetUserTaskFieldMappings();
