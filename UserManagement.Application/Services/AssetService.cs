@@ -106,7 +106,7 @@ namespace UserManagement.Application.Services
                     break;
                 case "unhold":
                     messageBody = $@"{{
-                                          ""name"": ""unhold"",
+                                          ""name"": ""unHold"",
                                           ""correlationKey"": ""{assetId}""
                                          }}";
                     break;
