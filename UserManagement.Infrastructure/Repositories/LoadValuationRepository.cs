@@ -13,7 +13,7 @@ namespace UserManagement.Infrastructure.Repositories
         public Task<LoadValuation> GetXVMAsync()
         {
             return Task.FromResult(
-                new LoadValuation { AssetId = "29490", ValuationEffectiveDate = "06/05/2024", AsIsValue = "$880580", ValuationType = "Automated Valuation Model" }
+                new LoadValuation { Id = 1, AssetId = "A7", ValuationEffectiveDate = "06/05/2024", AsIsValue = "$880580", ValuationType = "Automated Valuation Model" }
             );
         }
     }
