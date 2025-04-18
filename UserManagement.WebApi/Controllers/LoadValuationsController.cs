@@ -28,7 +28,7 @@ namespace UserManagement.WebApi.Controllers
             }
             else
             {
-                return HttpStatusCode.InternalServerError;
+                throw new Exception();
             }
         }   
     }
